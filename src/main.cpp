@@ -12,7 +12,8 @@
 #pragma error "!!!!!!!!"
 #endif
 
-// #include "./apps/_experiments/runtime_test.h"
+//#include "./apps/_experiments/runtime_test.h"
+//#include "./apps/_experiments/fireworks.h"
 #include "./apps/_experiments/hello_world.h"
 #include "./apps/main/luaapp.h"
 #include "./apps/main/stopwatch.h"
@@ -32,25 +33,28 @@
 #include "services/services.h"
 
 OswHal *hal = new OswHal();
-// OswAppRuntimeTest *runtimeTest = new OswAppRuntimeTest();
+//OswAppRuntimeTest *runtimeTest = new OswAppRuntimeTest();
 
 // HINT: NUM_APPS must match the number of apps below!
 #if defined(GPS_EDITION)
 #define NUM_APPS 5
 #else
-#define NUM_APPS 4
+#define NUM_APPS 6
 #endif
 RTC_DATA_ATTR uint8_t appPtr = 0;
 OswApp *mainApps[] = {
-    new OswAppWatchface(),
-// new OswAppHelloWorld(),
+    ///new OswAppFireworks(),
+    new OswAppWatchface(),  
 #if defined(GPS_EDITION)
     new OswAppMap(),
 #endif
-    // new OswAppPrintDebug(),
+    new OswAppHelloWorld(),
+    new OswAppPrintDebug(),
     new OswAppStopWatch(),    //
     new OswAppTimeFromWeb(),  //
-    new OswAppWaterLevel()
+    new OswAppWaterLevel(),
+    
+
     // new OswLuaApp(myLuaExample)
 };
 

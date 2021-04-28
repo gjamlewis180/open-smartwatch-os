@@ -1,17 +1,17 @@
-#ifndef OSW_APP_FIREWORKS_H
-#define OSW_APP_FIREWORKS_H
+#ifndef OSW_APP_WUMPUS_HUNT_H
+#define OSW_APP_WUMOUS_HUNT_H
 
 #include <osw_hal.h>
 
 #include "osw_app.h"
 
-class OswAppFireworks : public OswApp {
+class OswAppWumpusHunt : public OswApp {
  public:
-  OswAppFireworks(void){};
+  OswAppWumpusHunt(void){};
   void setup(OswHal* hal);
   void loop(OswHal* hal);
   void stop(OswHal* hal);
-  ~OswAppFireworks(){};
+  ~OswAppWumpusHunt(){};
 
  private:
 };

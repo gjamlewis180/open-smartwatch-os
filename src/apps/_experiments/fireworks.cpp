@@ -6,8 +6,8 @@
 #include <osw_app.h>
 #include <osw_hal.h>
 
-// OswAppHelloWorld::OswAppHelloWorld(void) : OswApp() {}
-#define NUM_FIREWORKS 10
+//OswAppHelloWorld::OswAppHelloWorld(void) : OswApp() {}
+#define NUM_FIREWORKS 4
 Firework fireworks[NUM_FIREWORKS];
 int16_t offsets[NUM_FIREWORKS];
 
@@ -59,4 +59,7 @@ void OswAppFireworks::loop(OswHal* hal) {
 
   lastTick = millis();
   delay(1000 / 30);
+}
+void OswAppFireworks::stop(OswHal* hal) {
+  // this is where you de-initialize stuff, gets called when another app is shown
 }
